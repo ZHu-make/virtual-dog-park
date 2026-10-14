@@ -350,3 +350,57 @@ main {
   transform: translateY(3px);
   box-shadow: 0 2px 0 #b98c39;
 }
+
+/* Next Day and Start Over get slightly different colors */
+
+.day-btn {
+  background: #7a9cc0;
+  box-shadow: 0 5px 0 #566e8c;
+  color: #ffffff;
+}
+
+.day-btn:active {
+  box-shadow: 0 2px 0 #566e8c;
+}
+
+.reset-btn {
+  background: #e3c9c9;
+  box-shadow: 0 5px 0 #b99a9a;
+  color: #4a2c2c;
+}
+
+.reset-btn:active {
+  box-shadow: 0 2px 0 #b99a9a;
+}
+
+/* ---------- Growth bar ---------- */
+
+.growth-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.growth-label {
+  font-weight: 600;
+  color: #3b5e3b;
+  white-space: nowrap;
+}
+
+.growth-bar {
+  flex: 1;
+  height: 16px;
+  background: #efe7da;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #e0d4c2;
+}
+
+.growth-fill {
+  height: 100%;
+  width: 20%;                 /* starts at 20% on Day 1 */
+  background: linear-gradient(90deg, #a7d3a0, #2d5e3a);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}

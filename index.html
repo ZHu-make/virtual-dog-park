@@ -104,6 +104,22 @@
       <!-- Dog card, hidden until adoption -->
       <div id="dogCard" class="dog-card" hidden>
         <h3 id="dogCardTitle">Your new friend</h3>
+
+        <!-- Growth bar: visual size indicator, labelled with text -->
+        <div class="growth-bar-wrap">
+          <span class="growth-label">Growth:</span>
+          <div
+            class="growth-bar"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="20"
+            aria-labelledby="statStage"
+          >
+            <div id="growthFill" class="growth-fill"></div>
+          </div>
+        </div>
+
         <ul class="dog-stats">
           <li><span class="note-label">Name:</span> <span id="statName">—</span></li>
           <li><span class="note-label">Breed:</span> <span id="statBreed">—</span></li>
@@ -115,6 +131,8 @@
         <div class="dog-actions">
           <button type="button" id="feedBtn" class="action-btn">🍖 Feed</button>
           <button type="button" id="playBtn" class="action-btn">🎾 Play</button>
+          <button type="button" id="nextDayBtn" class="action-btn day-btn">🌙 Next Day</button>
+          <button type="button" id="startOverBtn" class="action-btn reset-btn">↩️ Start Over</button>
         </div>
       </div>
     </section>
