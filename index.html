@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Dog Park · beginner friendly</title>
+  <!-- Link to external CSS file (style.css) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- No framework, no external APIs, no package managers. Pure vanilla. -->
+</head>
+<body>
+  <!-- ========== HEADER & WELCOME ========== -->
+  <header class="page-header">
+    <h1>🐕 Virtual Dog Park</h1>
+    <p class="welcome-message">
+      Welcome! This is a friendly place to learn about three popular dog breeds.<br>
+      No barking required — just scroll and enjoy.
+    </p>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- ---------- DOG ENCYCLOPEDIA ---------- -->
+    <section class="encyclopedia" aria-labelledby="encyclopedia-heading">
+      <h2 id="encyclopedia-heading">📖 Dog Encyclopedia</h2>
+      
+      <!-- Three breed cards, each with SVG illustration and notes -->
+      <div class="breed-grid">
+        <!-- Beagle -->
+        <article class="breed-card">
+          <div class="breed-image">
+            <img src="assets/beagle.svg" alt="Illustration of a Beagle" width="200" height="150">
+          </div>
+          <h3>Beagle</h3>
+          <ul class="breed-notes">
+            <li><span class="note-label">Size:</span> small–medium (about 20–30 lbs)</li>
+            <li><span class="note-label">Personality:</span> curious, merry, and great with families</li>
+            <li><span class="note-label">Everyday care:</span> daily walks, secure fence, regular ear checks</li>
+          </ul>
+        </article>
+
+        <!-- Golden Retriever -->
+        <article class="breed-card">
+          <div class="breed-image">
+            <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever" width="200" height="150">
+          </div>
+          <h3>Golden Retriever</h3>
+          <ul class="breed-notes">
+            <li><span class="note-label">Size:</span> large (55–75 lbs)</li>
+            <li><span class="note-label">Personality:</span> friendly, patient, and eager to please</li>
+            <li><span class="note-label">Everyday care:</span> lots of exercise, brushing 2–3 times a week</li>
+          </ul>
+        </article>
+
+        <!-- Poodle -->
+        <article class="breed-card">
+          <div class="breed-image">
+            <img src="assets/poodle.svg" alt="Illustration of a Poodle" width="200" height="150">
+          </div>
+          <h3>Poodle</h3>
+          <ul class="breed-notes">
+            <li><span class="note-label">Size:</span> toy, miniature, or standard</li>
+            <li><span class="note-label">Personality:</span> smart, playful, and elegant</li>
+            <li><span class="note-label">Everyday care:</span> regular grooming, puzzle toys, daily walks</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- MY VIRTUAL DOG ---------- -->
+    <section class="virtual-dog" aria-labelledby="virtual-dog-heading">
+      <h2 id="virtual-dog-heading">🐾 My Virtual Dog</h2>
+
+      <!-- Adoption form -->
+      <form id="adoptForm" class="adopt-form" novalidate>
+        <div class="form-row">
+          <label for="dogName">Dog name</label>
+          <input
+            type="text"
+            id="dogName"
+            name="dogName"
+            maxlength="20"
+            placeholder="e.g. Biscuit"
+            autocomplete="off"
+            aria-describedby="nameHelp"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="dogBreed">Choose a breed</label>
+          <select id="dogBreed" name="dogBreed">
+            <option value="Beagle">Beagle</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Poodle">Poodle</option>
+          </select>
+        </div>
+
+        <button type="submit" class="adopt-btn">Adopt</button>
+
+        <!-- Helpful message for invalid names (or success) -->
+        <p id="nameHelp" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Dog card, hidden until adoption -->
+      <div id="dogCard" class="dog-card" hidden>
+        <h3 id="dogCardTitle">Your new friend</h3>
+        <ul class="dog-stats">
+          <li><span class="note-label">Name:</span> <span id="statName">—</span></li>
+          <li><span class="note-label">Breed:</span> <span id="statBreed">—</span></li>
+          <li><span class="note-label">Day:</span> <span id="statDay">—</span></li>
+          <li><span class="note-label">Stage:</span> <span id="statStage">—</span></li>
+          <li><span class="note-label">Happiness:</span> <span id="statHappiness">—</span></li>
+        </ul>
+
+        <div class="dog-actions">
+          <button type="button" id="feedBtn" class="action-btn">🍖 Feed</button>
+          <button type="button" id="playBtn" class="action-btn">🎾 Play</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Small interactive "hello" button -->
+    <div class="interactive-zone">
+      <button id="greetButton" class="greet-btn">🐾 Say hello to the dogs</button>
+      <p id="greetMessage" class="greet-message"></p>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page-footer">
+    <p>Virtual Dog Park — built with HTML, CSS, and vanilla JavaScript. No external images or APIs.</p>
+  </footer>
+
+  <!-- Link to external JavaScript file (script.js) -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+/* ---------- style.css ---------- */
+/* Global reset & comfortable defaults for phone + laptop */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #faf7f2;        /* warm off-white, easy on the eyes */
+  color: #2c2c2c;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- Typography & spacing ----- */
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  color: #2d5e3a;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #2d5e3a;
+  border-bottom: 3px solid #d9c8a9;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #3b5e3b;
+}
+
+/* ----- Header & welcome message ----- */
+
+.page-header {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+  background: #ffffffd9;
+  padding: 1rem 1.5rem;
+  border-radius: 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #3f4a3f;
+  border: 1px solid #e6d9c8;
+  margin-top: 0.5rem;
+}
+
+/* ----- Main content & encyclopedia ----- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+  width: 100%;
+}
+
+.encyclopedia {
+  background: #ffffffd0;
+  border-radius: 28px;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  border: 1px solid #ece2d5;
+}
+
+/* ----- Breed grid: responsive, 1 col on phone, 3 on laptop ----- */
+
+.breed-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+/* On wider screens: three equal columns */
+@media (min-width: 640px) {
+  .breed-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- Breed card styling ----- */
+
+.breed-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e7ddd0;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.breed-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.07);
+}
+
+.breed-image {
+  background: #f7f2ea;
+  border-radius: 50% 50% 40% 40% / 40% 40% 30% 30%;
+  padding: 0.8rem 0.5rem 0.2rem 0.5rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.breed-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.breed-notes {
+  list-style: none;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+.breed-notes li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.25rem;
+  border-left: 4px solid #cbb99e;
+  padding-left: 0.8rem;
+}
+
+.note-label {
+  font-weight: 600;
+  color: #3b5e3b;
+  display: inline-block;
+  min-width: 6.5rem;
+}
+
+/* ----- Interactive button (vanilla JS) ----- */
+
+.interactive-zone {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.greet-btn {
+  background: #2d5e3a;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.9rem 2rem;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1b3a25;
+  transition: all 0.1s ease;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+}
+
+.greet-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1b3a25;
+}
+
+.greet-btn:focus-visible {
+  outline: 3px solid #b4925c;
+  outline-offset: 3px;
+}
+
+.greet-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #2d5e3a;
+  font-weight: 500;
+  min-height: 2.5rem;
+}
+
+/* ----- Footer ----- */
+
+.page-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #6f6b64;
+  border-top: 1px dashed #d9cebc;
+  padding-top: 1.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- Small tweaks for very small phones ----- */
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .breed-card {
+    padding: 1rem;
+  }
+  .note-label {
+    min-width: 5rem;
+  }
+}
+
+/* ---------- My Virtual Dog section ---------- */
+
+.virtual-dog {
+  background: #ffffffd0;
+  border-radius: 28px;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ece2d5;
+  margin-bottom: 2rem;
+}
+
+.adopt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 420px;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: #3b5e3b;
+}
+
+.form-row input,
+.form-row select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d9cebc;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2c2c2c;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  outline: 3px solid #b4925c;
+  outline-offset: 1px;
+}
+
+.adopt-btn {
+  align-self: flex-start;
+  background: #2d5e3a;
+  color: #ffffff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #1b3a25;
+  transition: all 0.1s ease;
+  font-family: inherit;
+}
+
+.adopt-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #1b3a25;
+}
+
+.form-message {
+  min-height: 1.4rem;
+  font-size: 1rem;
+  color: #b23b3b;
+  font-weight: 500;
+}
+
+.form-message.success {
+  color: #2d5e3a;
+}
+
+/* ---------- Adopted dog card ---------- */
+
+.dog-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.4rem 1.4rem 1.2rem 1.4rem;
+  border: 1px solid #e7ddd0;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+  max-width: 460px;
+}
+
+.dog-stats {
+  list-style: none;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.dog-stats li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 4px solid #cbb99e;
+}
+
+.dog-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  background: #e5b45c;
+  color: #2b2b2b;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #b98c39;
+  transition: all 0.1s ease;
+  font-family: inherit;
+}
+
+.action-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #b98c39;
+}
