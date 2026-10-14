@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150" role="img" aria-label="Illustration of a Poodle">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#f4eef7" rx="16"/>
+
+  <!-- Body -->
+  <ellipse cx="100" cy="100" rx="40" ry="26" fill="#e8e2e6"/>
+
+  <!-- Puffy chest -->
+  <circle cx="100" cy="94" r="20" fill="#f7f3f8"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="60" r="28" fill="#f7f3f8"/>
+
+  <!-- Topknot puff -->
+  <circle cx="100" cy="36" r="14" fill="#e8e2e6"/>
+  <circle cx="90" cy="38" r="8" fill="#e8e2e6"/>
+  <circle cx="110" cy="38" r="8" fill="#e8e2e6"/>
+
+  <!-- Ears -->
+  <ellipse cx="72" cy="66" rx="12" ry="22" fill="#dcd4da"/>
+  <ellipse cx="128" cy="66" rx="12" ry="22" fill="#dcd4da"/>
+
+  <!-- Muzzle -->
+  <ellipse cx="100" cy="74" rx="15" ry="11" fill="#ffffff"/>
+
+  <!-- Nose -->
+  <ellipse cx="100" cy="70" rx="5" ry="3.5" fill="#2b2b2b"/>
+
+  <!-- Eyes -->
+  <circle cx="89" cy="57" r="4" fill="#2b2b2b"/>
+  <circle cx="111" cy="57" r="4" fill="#2b2b2b"/>
+  <circle cx="90" cy="56" r="1.4" fill="#ffffff"/>
+  <circle cx="112" cy="56" r="1.4" fill="#ffffff"/>
+
+  <!-- Mouth -->
+  <path d="M95 81 Q100 86 105 81" stroke="#2b2b2b" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <!-- Tail pompom -->
+  <circle cx="146" cy="82" r="10" fill="#f7f3f8"/>
+
+  <!-- Legs with fluffy ankles -->
+  <rect x="74" y="114" width="9" height="24" rx="4" fill="#dcd4da"/>
+  <rect x="117" y="114" width="9" height="24" rx="4" fill="#dcd4da"/>
+  <circle cx="78" cy="116" r="7" fill="#f7f3f8"/>
+  <circle cx="121" cy="116" r="7" fill="#f7f3f8"/>
+</svg>

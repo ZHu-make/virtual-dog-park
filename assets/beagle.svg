@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150" role="img" aria-label="Illustration of a Beagle">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#f2e8d5" rx="16"/>
+
+  <!-- Body -->
+  <ellipse cx="100" cy="100" rx="42" ry="26" fill="#c98a3d"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="62" r="30" fill="#e0a45c"/>
+
+  <!-- Ears -->
+  <ellipse cx="72" cy="66" rx="14" ry="24" fill="#8b5a2b"/>
+  <ellipse cx="128" cy="66" rx="14" ry="24" fill="#8b5a2b"/>
+
+  <!-- Muzzle -->
+  <ellipse cx="100" cy="78" rx="18" ry="12" fill="#f7e6c9"/>
+
+  <!-- Nose -->
+  <ellipse cx="100" cy="73" rx="6" ry="4" fill="#2b2b2b"/>
+
+  <!-- Eyes -->
+  <circle cx="88" cy="58" r="4" fill="#2b2b2b"/>
+  <circle cx="112" cy="58" r="4" fill="#2b2b2b"/>
+  <circle cx="89" cy="57" r="1.4" fill="#ffffff"/>
+  <circle cx="113" cy="57" r="1.4" fill="#ffffff"/>
+
+  <!-- Mouth -->
+  <path d="M94 84 Q100 90 106 84" stroke="#2b2b2b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Tail -->
+  <path d="M140 96 Q158 84 152 68" stroke="#c98a3d" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Legs -->
+  <rect x="72" y="116" width="10" height="22" rx="4" fill="#a96c2b"/>
+  <rect x="118" y="116" width="10" height="22" rx="4" fill="#a96c2b"/>
+</svg>
